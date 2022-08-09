@@ -137,6 +137,7 @@ registerHBSHelper('ifCond', function (v1, operator, v2, options) {
 
 function getTemplate(templateName) {
     var templateInstance = templateCache[templateName];
+    console.log(templateInstance, templateName, handlebars.VERSION);
     if (!templateInstance) {
         throw 'No template by the name "' + templateName + '".  Check ui/src/main/js/view/templates/index.js and make sure the template is registered in the templateCache.';
     }
